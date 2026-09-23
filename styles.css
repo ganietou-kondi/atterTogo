@@ -1,0 +1,263 @@
+/* styles.css
+   Compléments au design Tailwind utilisé dans index.html.
+   Le framework Tailwind est chargé par CDN dans la page.
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.nav-link {
+  color: #334155;
+  font-weight: 600;
+  transition: color .2s ease;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #108456;
+}
+
+.mobile-link {
+  padding: .8rem 1rem;
+  border-radius: .75rem;
+  font-weight: 600;
+}
+
+.section-kicker {
+  color: #108456;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+}
+
+.section-title {
+  margin-top: .65rem;
+  color: #073b2b;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -.04em;
+}
+
+.card {
+  border: 1px solid #e2e8f0;
+  border-radius: 1.5rem;
+  background: white;
+  box-shadow: 0 15px 45px rgba(7,59,43,.06);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 55px rgba(7,59,43,.10);
+}
+
+.icon-box {
+  width: 3rem;
+  height: 3rem;
+  border-radius: .9rem;
+  display: grid;
+  place-items: center;
+  background: #effcf6;
+  color: #108456;
+  font-weight: 800;
+}
+
+.card-title {
+  margin-top: 1.2rem;
+  color: #073b2b;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+.card-text {
+  margin-top: .55rem;
+  color: #64748b;
+  line-height: 1.7;
+  font-size: .95rem;
+}
+
+.stat {
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 800;
+}
+.stat-label {
+  margin-top: .55rem;
+  color: #cdeee0;
+  font-size: .9rem;
+}
+
+.action-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  border: 1px solid #e2e8f0;
+  transition: .25s ease;
+}
+.action-card:hover {
+  transform: translateY(-6px);
+  border-color: #b7e8d0;
+  box-shadow: 0 20px 50px rgba(7,59,43,.08);
+}
+.action-number {
+  color: #f4b942;
+  font-weight: 900;
+  font-size: .85rem;
+  letter-spacing: .1em;
+}
+.action-card h3 {
+  margin-top: 1.25rem;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #073b2b;
+}
+.action-card p {
+  margin-top: .7rem;
+  color: #64748b;
+  line-height: 1.7;
+}
+.action-card a {
+  display: inline-block;
+  margin-top: 1.25rem;
+  color: #108456;
+  font-weight: 700;
+}
+
+.news-card {
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background: white;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 35px rgba(15,23,42,.04);
+}
+.news-image {
+  height: 210px;
+  display: grid;
+  place-items: center;
+  color: #073b2b;
+  font-size: .8rem;
+  font-weight: 900;
+  letter-spacing: .18em;
+}
+.news-date {
+  color: #108456;
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+.news-card h3 {
+  margin-top: .6rem;
+  color: #073b2b;
+  font-size: 1.2rem;
+  line-height: 1.35;
+  font-weight: 800;
+}
+.news-card p:not(.news-date) {
+  margin-top: .7rem;
+  color: #64748b;
+  line-height: 1.65;
+}
+.news-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #108456;
+  font-weight: 700;
+}
+
+.team-card {
+  text-align: center;
+  padding: 1.8rem 1rem;
+  border-radius: 1.5rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+}
+.avatar {
+  width: 86px;
+  height: 86px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #d8f8e8;
+  color: #0b6543;
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+.team-card h3 {
+  color: #073b2b;
+  font-weight: 800;
+}
+.team-card p {
+  margin-top: .3rem;
+  color: #64748b;
+  font-size: .9rem;
+}
+
+.contact-row {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.contact-row > span {
+  width: 2.7rem;
+  height: 2.7rem;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: .8rem;
+  background: #d8f8e8;
+  color: #0b6543;
+  font-weight: 800;
+}
+.contact-row strong {
+  color: #073b2b;
+}
+.contact-row p {
+  margin-top: .15rem;
+  color: #64748b;
+}
+
+form label {
+  display: block;
+  color: #334155;
+  font-size: .9rem;
+  font-weight: 700;
+}
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+  margin-top: .5rem;
+  padding: .85rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: .8rem;
+  outline: none;
+  color: #0f172a;
+  font-weight: 400;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+form input:focus,
+form textarea:focus {
+  border-color: #16a36b;
+  box-shadow: 0 0 0 4px rgba(22,163,107,.10);
+}
+
+.social {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 50%;
+  color: white;
+  font-size: .8rem;
+  font-weight: 800;
+  transition: .2s ease;
+}
+.social:hover {
+  background: white;
+  color: #0b6543;
+}

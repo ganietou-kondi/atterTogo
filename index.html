@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ATTER TOGO — Association engagée pour un Togo plus solidaire, inclusif et durable.">
+  <title>ATTER TOGO | Association</title>
+
+  <!-- Tailwind CSS via CDN : idéal pour prototypage / hébergement statique -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#effcf6',
+              100: '#d8f8e8',
+              500: '#16a36b',
+              600: '#108456',
+              700: '#0b6543',
+              900: '#073b2b'
+            },
+            accent: '#f4b942'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 20px 60px rgba(7,59,43,.10)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="font-sans text-slate-800 bg-white">
+  <!-- Top bar -->
+  <div class="bg-brand-900 text-white text-sm">
+    <div class="max-w-7xl mx-auto px-5 py-2 flex items-center justify-between gap-4">
+      <p>ATTER TOGO — Agir aujourd'hui pour construire demain.</p>
+      <a href="#contact" class="hidden sm:inline hover:text-accent transition">Nous contacter →</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="site-header" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-100">
+    <nav class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between">
+      <a href="#accueil" class="flex items-center gap-3" aria-label="ATTER TOGO accueil">
+        <div class="w-11 h-11 rounded-xl bg-brand-600 text-white grid place-items-center font-extrabold text-lg">A</div>
+        <div>
+          <div class="font-extrabold tracking-tight text-brand-900">ATTER TOGO</div>
+          <div class="text-[11px] uppercase tracking-[.18em] text-slate-500">Association</div>
+        </div>
+      </a>
+
+      <button id="menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span class="block w-6 h-0.5 bg-slate-700 mb-1.5"></span>
+        <span class="block w-6 h-0.5 bg-slate-700 mb-1.5"></span>
+        <span class="block w-6 h-0.5 bg-slate-700"></span>
+      </button>
+
+      <div id="nav-menu" class="hidden md:flex items-center gap-8">
+        <a class="nav-link" href="#accueil">Accueil</a>
+        <a class="nav-link" href="#apropos">À propos</a>
+        <a class="nav-link" href="#actions">Nos actions</a>
+        <a class="nav-link" href="#actualites">Actualités</a>
+        <a class="nav-link" href="#equipe">Équipe</a>
+        <a href="#contact" class="px-5 py-3 rounded-full bg-brand-600 text-white font-semibold hover:bg-brand-700 transition">Nous soutenir</a>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden border-t bg-white">
+      <div class="px-5 py-4 grid gap-2">
+        <a class="mobile-link" href="#accueil">Accueil</a>
+        <a class="mobile-link" href="#apropos">À propos</a>
+        <a class="mobile-link" href="#actions">Nos actions</a>
+        <a class="mobile-link" href="#actualites">Actualités</a>
+        <a class="mobile-link" href="#equipe">Équipe</a>
+        <a class="mobile-link bg-brand-600 text-white" href="#contact">Nous soutenir</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="accueil" class="relative overflow-hidden bg-brand-50">
+      <div class="max-w-7xl mx-auto px-5 py-20 lg:py-28 grid lg:grid-cols-2 gap-14 items-center">
+        <div class="relative z-10">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-brand-700 text-sm font-semibold shadow-sm border border-brand-100">
+            <span class="w-2 h-2 rounded-full bg-accent"></span>
+            Ensemble, faisons la différence
+          </span>
+
+          <h1 class="mt-6 text-5xl md:text-6xl font-extrabold leading-[1.05] tracking-tight text-brand-900">
+            Des actions concrètes pour un <span class="text-brand-600">Togo plus solidaire.</span>
+          </h1>
+
+          <p class="mt-6 text-lg leading-8 text-slate-600 max-w-xl">
+            ATTER TOGO rassemble des femmes, des hommes et des partenaires qui souhaitent
+            transformer les défis locaux en opportunités durables pour les communautés.
+          </p>
+
+          <div class="mt-9 flex flex-wrap gap-4">
+            <a href="#actions" class="px-6 py-3.5 rounded-full bg-brand-600 text-white font-bold hover:bg-brand-700 transition shadow-lg shadow-brand-600/20">
+              Découvrir nos actions
+            </a>
+            <a href="#apropos" class="px-6 py-3.5 rounded-full bg-white text-brand-700 font-bold border border-brand-200 hover:border-brand-400 transition">
+              Qui sommes-nous ?
+            </a>
+          </div>
+
+          <div class="mt-12 grid grid-cols-3 max-w-lg gap-6 border-t border-brand-100 pt-7">
+            <div><strong class="text-3xl font-extrabold text-brand-900">01</strong><p class="text-sm text-slate-500 mt-1">Engagement</p></div>
+            <div><strong class="text-3xl font-extrabold text-brand-900">03</strong><p class="text-sm text-slate-500 mt-1">Axes d'action</p></div>
+            <div><strong class="text-3xl font-extrabold text-brand-900">∞</strong><p class="text-sm text-slate-500 mt-1">Possibilités</p></div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -inset-8 bg-accent/20 blur-3xl rounded-full"></div>
+          <div class="relative rounded-[2rem] overflow-hidden shadow-soft border-8 border-white">
+            <img
+              src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1200&q=85"
+              alt="Jeunes réunis dans le cadre d'une action communautaire"
+              class="w-full h-[520px] object-cover"
+            >
+            <div class="absolute left-5 right-5 bottom-5 bg-white/95 backdrop-blur rounded-2xl p-5 shadow-lg">
+              <p class="text-sm font-semibold text-brand-600">NOTRE CONVICTION</p>
+              <p class="mt-1 font-bold text-xl text-brand-900">Le changement commence par l'action locale.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="apropos" class="py-24">
+      <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="section-kicker">À PROPOS DE NOUS</p>
+          <h2 class="section-title">Une association proche des communautés.</h2>
+          <p class="mt-6 text-slate-600 leading-8">
+            ATTER TOGO œuvre à créer des passerelles entre les citoyens, les acteurs locaux,
+            les institutions et les partenaires afin de faire émerger des solutions adaptées
+            aux réalités du terrain.
+          </p>
+          <p class="mt-4 text-slate-600 leading-8">
+            Notre approche repose sur l'écoute, la participation, la transmission de compétences
+            et la mise en œuvre de projets à impact durable.
+          </p>
+          <a href="#contact" class="inline-flex mt-8 font-bold text-brand-700 hover:text-brand-900">Échanger avec nous →</a>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div class="card p-7">
+            <div class="icon-box">01</div>
+            <h3 class="card-title">Notre vision</h3>
+            <p class="card-text">Des communautés autonomes, inclusives et capables de porter leur propre développement.</p>
+          </div>
+          <div class="card p-7 sm:translate-y-8">
+            <div class="icon-box">02</div>
+            <h3 class="card-title">Notre mission</h3>
+            <p class="card-text">Concevoir et accompagner des initiatives utiles, accessibles et ancrées dans les réalités locales.</p>
+          </div>
+          <div class="card p-7">
+            <div class="icon-box">03</div>
+            <h3 class="card-title">Nos valeurs</h3>
+            <p class="card-text">Intégrité, solidarité, inclusion, responsabilité et respect des communautés.</p>
+          </div>
+          <div class="card p-7 sm:translate-y-8">
+            <div class="icon-box">04</div>
+            <h3 class="card-title">Notre méthode</h3>
+            <p class="card-text">Écouter, co-construire, agir, mesurer les résultats et améliorer continuellement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact banner -->
+    <section class="bg-brand-900 text-white">
+      <div class="max-w-7xl mx-auto px-5 py-16 grid md:grid-cols-4 gap-10 text-center md:text-left">
+        <div><div class="stat">+100</div><p class="stat-label">Personnes accompagnées*</p></div>
+        <div><div class="stat">+10</div><p class="stat-label">Activités communautaires*</p></div>
+        <div><div class="stat">03</div><p class="stat-label">Axes prioritaires</p></div>
+        <div><div class="stat">01</div><p class="stat-label">Vision commune</p></div>
+      </div>
+    </section>
+
+    <!-- Actions -->
+    <section id="actions" class="py-24 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="max-w-2xl">
+          <p class="section-kicker">NOS ACTIONS</p>
+          <h2 class="section-title">Transformer les idées en impact.</h2>
+          <p class="mt-5 text-slate-600 leading-7">
+            Les contenus ci-dessous sont une base de présentation à adapter aux programmes
+            réels d'ATTER TOGO.
+          </p>
+        </div>
+
+        <div class="mt-12 grid md:grid-cols-3 gap-6">
+          <article class="action-card">
+            <div class="action-number">01</div>
+            <h3>Éducation & jeunesse</h3>
+            <p>Renforcer les compétences, l'orientation et les opportunités offertes aux jeunes.</p>
+            <a href="#contact">En savoir plus →</a>
+          </article>
+          <article class="action-card">
+            <div class="action-number">02</div>
+            <h3>Autonomisation</h3>
+            <p>Encourager les initiatives économiques et sociales qui favorisent l'autonomie des populations.</p>
+            <a href="#contact">En savoir plus →</a>
+          </article>
+          <article class="action-card">
+            <div class="action-number">03</div>
+            <h3>Développement local</h3>
+            <p>Soutenir des projets collectifs qui améliorent durablement le quotidien des communautés.</p>
+            <a href="#contact">En savoir plus →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="py-20">
+      <div class="max-w-5xl mx-auto px-5">
+        <div class="rounded-[2rem] bg-brand-50 p-10 md:p-16 text-center">
+          <div class="text-5xl text-brand-500 font-serif">“</div>
+          <blockquote class="mt-2 text-2xl md:text-4xl font-bold leading-tight text-brand-900">
+            « Nous croyons que chaque communauté possède les ressources et les talents nécessaires pour construire son avenir. »
+          </blockquote>
+          <p class="mt-6 text-slate-500">— ATTER TOGO</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- News -->
+    <section id="actualites" class="py-24 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5">
+          <div>
+            <p class="section-kicker">ACTUALITÉS</p>
+            <h2 class="section-title">La vie de l'association.</h2>
+          </div>
+          <a href="#contact" class="font-bold text-brand-700">Toutes les actualités →</a>
+        </div>
+
+        <div class="mt-12 grid md:grid-cols-3 gap-7">
+          <article class="news-card">
+            <div class="news-image bg-brand-100">ACTU 01</div>
+            <div class="p-6">
+              <p class="news-date">À VENIR · 2026</p>
+              <h3>Une nouvelle initiative au service des communautés</h3>
+              <p>Ajoutez ici vos actualités, projets, événements ou comptes rendus.</p>
+              <a href="#contact">Lire la suite →</a>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-image bg-amber-100">ACTU 02</div>
+            <div class="p-6">
+              <p class="news-date">ÉVÉNEMENT</p>
+              <h3>Retour sur une activité de terrain</h3>
+              <p>Présentez les résultats et les témoignages issus de vos actions.</p>
+              <a href="#contact">Lire la suite →</a>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-image bg-slate-200">ACTU 03</div>
+            <div class="p-6">
+              <p class="news-date">PARTENARIAT</p>
+              <h3>Construire ensemble des projets durables</h3>
+              <p>Valorisez ici vos partenaires et les collaborations de l'association.</p>
+              <a href="#contact">Lire la suite →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section id="equipe" class="py-24">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="max-w-2xl">
+          <p class="section-kicker">NOTRE ÉQUIPE</p>
+          <h2 class="section-title">Des personnes engagées.</h2>
+          <p class="mt-5 text-slate-600">Remplacez les profils ci-dessous par les membres réels de votre équipe.</p>
+        </div>
+
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="team-card"><div class="avatar">DG</div><h3>Nom Prénom</h3><p>Direction / Coordination</p></div>
+          <div class="team-card"><div class="avatar">CO</div><h3>Nom Prénom</h3><p>Coordination des projets</p></div>
+          <div class="team-card"><div class="avatar">CP</div><h3>Nom Prénom</h3><p>Communication & partenariats</p></div>
+          <div class="team-card"><div class="avatar">AD</div><h3>Nom Prénom</h3><p>Administration</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="px-5 pb-24">
+      <div class="max-w-7xl mx-auto rounded-[2rem] bg-brand-600 text-white p-10 md:p-16 overflow-hidden relative">
+        <div class="absolute -right-20 -top-20 w-72 h-72 bg-white/10 rounded-full blur-2xl"></div>
+        <div class="relative max-w-3xl">
+          <p class="uppercase tracking-[.18em] text-sm font-bold text-brand-100">Vous voulez agir avec nous ?</p>
+          <h2 class="mt-3 text-3xl md:text-5xl font-extrabold">Un projet, un partenariat ou une idée ? Parlons-en.</h2>
+          <a href="#contact" class="inline-flex mt-8 px-6 py-3.5 bg-white text-brand-700 rounded-full font-bold hover:bg-brand-50 transition">Prendre contact</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-14">
+        <div>
+          <p class="section-kicker">CONTACT</p>
+          <h2 class="section-title">Échangeons avec ATTER TOGO.</h2>
+          <p class="mt-5 text-slate-600 leading-7">Les coordonnées ci-dessous sont des placeholders à remplacer par celles de l'association.</p>
+
+          <div class="mt-10 grid gap-5">
+            <div class="contact-row"><span>✉</span><div><strong>Email</strong><p>contact@attertogo.org</p></div></div>
+            <div class="contact-row"><span>☎</span><div><strong>Téléphone</strong><p>+228 XX XX XX XX</p></div></div>
+            <div class="contact-row"><span>⌖</span><div><strong>Adresse</strong><p>Lomé, Togo</p></div></div>
+          </div>
+        </div>
+
+        <form id="contact-form" class="bg-white p-7 md:p-9 rounded-3xl shadow-soft border border-slate-100">
+          <div class="grid md:grid-cols-2 gap-5">
+            <label>Nom complet<input required name="name" type="text" placeholder="Votre nom"></label>
+            <label>Email<input required name="email" type="email" placeholder="vous@email.com"></label>
+          </div>
+          <label class="mt-5">Sujet<input required name="subject" type="text" placeholder="Objet de votre message"></label>
+          <label class="mt-5">Message<textarea required name="message" rows="5" placeholder="Votre message..."></textarea></label>
+          <button class="mt-6 w-full py-3.5 rounded-xl bg-brand-600 text-white font-bold hover:bg-brand-700 transition" type="submit">
+            Envoyer le message
+          </button>
+          <p id="form-message" class="hidden mt-4 text-sm text-brand-700"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-brand-900 text-white">
+    <div class="max-w-7xl mx-auto px-5 py-14 grid md:grid-cols-4 gap-10">
+      <div class="md:col-span-2">
+        <div class="font-extrabold text-2xl">ATTER TOGO</div>
+        <p class="mt-4 text-brand-100 max-w-md leading-7">
+          Une association engagée pour des communautés plus fortes, inclusives et durables.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-bold">Navigation</h3>
+        <div class="mt-4 grid gap-2 text-brand-100">
+          <a href="#apropos" class="hover:text-white">À propos</a>
+          <a href="#actions" class="hover:text-white">Nos actions</a>
+          <a href="#actualites" class="hover:text-white">Actualités</a>
+          <a href="#contact" class="hover:text-white">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h3 class="font-bold">Réseaux</h3>
+        <div class="mt-4 flex gap-3">
+          <a href="#" aria-label="Facebook" class="social">f</a>
+          <a href="#" aria-label="LinkedIn" class="social">in</a>
+          <a href="#" aria-label="Instagram" class="social">ig</a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-5 py-5 flex flex-col sm:flex-row justify-between gap-3 text-sm text-brand-100">
+        <p>© <span id="year"></span> ATTER TOGO. Tous droits réservés.</p>
+        <p>Site vitrine — version de départ</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    emailjs.init({
+      publicKey: "Rn_X3xu4z5VUPS2ql"
+    });
+  </script>
+
+  <!-- JavaScript du site -->
+  <script src="app.js"></script>
+</body>
+</html>
